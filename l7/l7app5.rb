@@ -28,5 +28,4 @@ if ans=="Y" and n>=	18
 			exit
 		end
 	end
-	
 end
