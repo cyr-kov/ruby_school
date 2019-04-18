@@ -1,13 +1,13 @@
 #encoding cp866
 
-print "Вы довольны своей зарплатой? (Y/N) "
-answer=gets.strip.capitalize
+print "Вы довльны своей зарплатой? (1-Yes/0-No) "
+answer=gets.to_i
 
- if answer=="Y"
+ if answer==1
  	puts "Очень Хорошо"
 end
 
-if answer=="N"
+if answer==0
 	puts "очень плохо"
 end
 
