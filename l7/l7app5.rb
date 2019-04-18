@@ -3,8 +3,14 @@ n=gets.to_i
 print "Хотите играть (Y/N)? "
 ans=gets.strip.capitalize
 
+
 if ans=="Y" and n>=	18
 	puts "Хорошо! Поиграем!"
+	print "Ведите ставку за игру(выигрыш умножится на ставку):"
+	s=gets.to_i
+	if s<=0 || s>=100
+		s=1
+	end
 	money=100
 	1.upto(1000) do
 		puts "Ведите Enter чтобы дёрнуть ручку"
@@ -19,8 +25,8 @@ if ans=="Y" and n>=	18
 		end
 		#1.upto(9) do |nn|
 			if x==y && y==z && x!=6
-				puts "Вам зачислено #{x*10} долларов."
-			 	money+=x*10
+				puts "Вам зачислено #{x*10*s} долларов."
+			 	money+=x*10*s
 			end
 		#end
 		if x==y && y==z && x==6
@@ -30,11 +36,11 @@ if ans=="Y" and n>=	18
 		if  x==1 && y==2 && z==3
 			puts "!!!!!!!!!MEGA BONUS
 			".concat(3,3,3,3,3)
-			money+=123
+			money+=123*s
 		end
-		money-=1
+		money-=s
 		puts "Ваш баланс #{money}"
-		if money<=0 
+		if money<s 
 			puts "Вы проигрались!"
 			exit
 		end
