@@ -1,11 +1,18 @@
 print "Введите А: "
-a=gets.to_i
+a=gets.to_f
 
 print "Введите В: "
-b=gets.to_i
+b=gets.to_f
 
 print"Что будем делать? (+ - * /)"
 opr=gets.strip
+
+if opr=="/" && b==0
+	puts "На ноль делить  нельзя!"
+	exit
+end
+
+r=0
 
 if opr=="+" 
 	r=a+b
@@ -17,7 +24,7 @@ end
 if opr=="*" 
 	r=a*b
 end
-if opr=="/" 
+if opr=="/" && b!=0
 	r=a/b
 end
 
