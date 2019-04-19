@@ -2,7 +2,7 @@ print "Я загадал число. Угадай какое? (от 1 до 100)"
 n=gets.to_i
 
 x=rand(1..100)
-1.times(1000) do
+1000.times do
 	if n==x 
 		puts "Угадал, молодец!"
 		exit
@@ -11,4 +11,6 @@ x=rand(1..100)
 	else 
 		puts "Нет, меньше"
 	end
+	print "Ещё попытка: "
+	n=gets.to_i
 end
