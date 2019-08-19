@@ -32,11 +32,11 @@ Shoes.app(title: "Игра Лила",width:765,height:700,resizable:false) do
   		stroke white
   		fill rgb(0, 0, 0, 0)
   		@x=8
-  		@y=8
-  		KEYPRESS
+  		@y=7
+  		#KEYPRESS
   		@x.downto(0) {|ix| 
   			@y.downto(0) { |iy|
-  				@rect = rect(left:ix*85, top:iy*85, width:85,height:85)
+  				@rect = rect(left:ix*85, top:iy*87, width:85,height:87)
   			}
   		}
 	end
